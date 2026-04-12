@@ -1,0 +1,23 @@
+.product-card {
+    transition: 0.3s;
+    border: none;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.img-container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+.product-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
