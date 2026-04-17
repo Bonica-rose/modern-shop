@@ -1,6 +1,6 @@
 # Modern Shop
 
-A responsive, and functional front-end shopping application built with HTML5, Bootstrap 5, and Vanilla JavaScript. This app fetches real-time data from the [DummyJSON API](https://dummyjson.com) to simulate a modern shopping experience.
+A responsive ecommerce application built with HTML5, Bootstrap 5, and Vanilla JavaScript. This app fetches real-time data from the [DummyJSON API](https://dummyjson.com) to simulate a modern shopping experience.
 
 
 ## Features

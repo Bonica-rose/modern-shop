@@ -37,7 +37,7 @@ function renderCart() {
             <div>
                 <button class="btn btn-sm btn-secondary-darky" onclick="changeQty(${item.id}, -1)">-</button>
                 <button class="btn btn-sm btn-secondary-darky" onclick="changeQty(${item.id}, 1)">+</button>
-                <button class="btn btn-sm text-danger" onclick="handleRemove(${item.id})">🗑</button>
+                <button class="btn btn-sm btn-secondary-darky" onclick="handleRemove(${item.id})"><i class="fa-solid fa-trash"></i></button>
             </div>
         </div>`;
     }).join('');
