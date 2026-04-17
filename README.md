@@ -16,5 +16,5 @@ A responsive, and functional front-end shopping application built with HTML5, Bo
 
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
 - **Styling**: [Bootstrap 5.3](https://getbootstrap.com)
-- **Icons**: [Font Awesome 6](https://fontawesome.com)
+- **Icons**: [Font Awesome 7](https://fontawesome.com)
 - **API**: [DummyJSON](https://dummyjson.com)

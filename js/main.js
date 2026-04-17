@@ -1,22 +1,6 @@
 let products = [];
 const grid = document.getElementById('productGrid');
 
-// Current exchange rate: 1 USD = 93.10 INR
-const USD_TO_INR = 93.10;
-
-function formatINR(amountInUSD) {
-    // Convert to INR and round to the nearest whole number
-    const amountInINR = Math.round(amountInUSD * USD_TO_INR);
-
-    // Format with zero decimal places
-    return new Intl.NumberFormat('en-IN', {
-        style: 'currency',
-        currency: 'INR',
-        maximumFractionDigits: 0, // Removes decimal points
-        minimumFractionDigits: 0  // Removes decimal points
-    }).format(amountInINR);
-}
-
 // Fetch Data from DummyJSON
 async function loadShop() {
     try {
@@ -30,10 +14,10 @@ async function loadShop() {
         products = pData.products; // DummyJSON wraps array in 'products' key
         const categories = await cRes.json();
 
-        // 2. Limit the result to the first 5 elements
+        // Limit the result to the first 5 elements
         const limitedCategories = categories.slice(0, 5);
 
-        // 3. Populate only those 5 Category Filter
+        // Populate only those 5 Category Filter
         const catFilter = document.getElementById('categoryFilter');
         limitedCategories.forEach(cat => {
             const opt = document.createElement('option');
@@ -70,12 +54,26 @@ function render(data) {
                 <p class="card-text text-muted small flex-grow-1">${p.description.substring(0, 50)}...</p>
                 <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
                     <span class="h5 mb-0">${formatINR(p.price)}</span>
-                    <button class="btn btn-sm btn-dark px-3"><i class="fa-solid fa-plus me-1"></i>Add</button>
+                    <button onclick="handleAddToCart(${p.id})" class="btn btn-sm btn-dark px-3">
+                        <i class="fa-solid fa-plus me-1"></i>Add
+                    </button>                    
                 </div>
+                <button onclick="goToProduct(${p.id})" class="btn btn-sm btn-outline-warning mt-2">View</button>
             </div>
         </div>
     </div>
 `).join('');
+}
+
+function goToProduct(id) {
+    window.location.href = `pages/product.html?id=${id}`;
+} 
+
+// Cart Interaction
+function handleAddToCart(productId) {
+    const product = products.find(p => p.id === productId);
+
+    addToCart(product);  // from cart.js
 }
 
 // Filter & Search Logic
@@ -94,10 +92,11 @@ function updateDisplay() {
 
 // Shuffle Helper
 function shuffle() {
-    for (let i = products.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [products[i], products[j]] = [products[j], products[i]];
-    }
+    // for (let i = products.length - 1; i > 0; i--) {
+    //     const j = Math.floor(Math.random() * (i + 1));
+    //     [products[i], products[j]] = [products[j], products[i]];
+    // }
+    products.sort(() => Math.random() - 0.5);
     updateDisplay();
 }
 
@@ -108,3 +107,4 @@ document.getElementById('shuffleBtn').addEventListener('click', shuffle);
 
 // Initial Load
 loadShop();
+updateCartBadge();

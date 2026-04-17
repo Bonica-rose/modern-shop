@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Modern Shop</title>
+    <meta name="description"
+        content="Explore Product Details: A high-performance e-commerce storefront featuring real-time product filtering, category browsing, and a seamless sliding cart experience powered by DummyJSON API.">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font-awesome/all.min.css">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-bag-shopping me-2"></i>MODERN-SHOP</a>
+
+            <a href="../pages/yourCart.html" class="btn btn-dark position-relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartCount"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs  -->
+    <nav aria-label="breadcrumb" class="py-2">
+        <div class="container flex-column flex-md-row d-md-flex align-items-center justify-content-between">
+            <ol class="breadcrumb mb-3" id="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item active">Product</li>
+            </ol>
+            <button onclick="goBack()" class="btn btn-outline-secondary btn-sm mb-4">
+                ← Back
+            </button>
+        </div>        
+    </nav>
+
+    <div class="container py-4"> 
+        <div class="row" id="productDetails">
+            <!-- Dynamic content -->
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/rate.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/product.js"></script>
+</body>
+
+</html>

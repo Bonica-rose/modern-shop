@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Modern Shop</title>
+    <meta name="description"
+        content="Explore Shopping Cart: A high-performance e-commerce storefront featuring real-time product filtering, category browsing, and a seamless sliding cart experience powered by DummyJSON API.">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font-awesome/all.min.css">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-bag-shopping me-2"></i>MODERN-SHOP</a>
+
+            <a href="./yourCart.html" class="btn btn-dark position-relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartCount"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs  -->
+    <nav aria-label="breadcrumb" class="py-2">
+        <div class="container flex-column flex-md-row d-md-flex align-items-center justify-content-between">
+            <ol class="breadcrumb mb-3" id="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item active">Your Cart</li>
+            </ol>
+        </div>
+    </nav>
+
+    <div class="container py-3">
+        <h3 class="mb-4">🛒 Your Shopping Cart</h3>
+        
+        <div id="cartItems"></div>
+
+        <div class="border-top pt-3">
+            <div class="d-flex justify-content-between h5">
+                <span>Total:</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <div class="d-flex justify-content-end mt-2 gap-2"> 
+                <button id="clearCartBtn" class="btn btn-sm btn-outline-danger" onclick="handleClearCart()">
+                    <i class="fa-solid fa-trash me-1"></i>Clear Cart
+                </button>
+                <button class="btn btn-primary" onclick="alert('Checkout integration coming soon!')">Checkout</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/rate.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/cartui.js"></script>
+</body>
+
+</html>
