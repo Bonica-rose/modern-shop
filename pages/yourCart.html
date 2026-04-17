@@ -8,6 +8,9 @@
     <meta name="description"
         content="Explore Shopping Cart: A high-performance e-commerce storefront featuring real-time product filtering, category browsing, and a seamless sliding cart experience powered by DummyJSON API.">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../font-awesome/all.min.css">
     <link rel="stylesheet" href="../css/app.css">
@@ -15,11 +18,11 @@
 
 <body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-darky sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-bag-shopping me-2"></i>MODERN-SHOP</a>
 
-            <a href="./yourCart.html" class="btn btn-dark position-relative">
+            <a href="./yourCart.html" class="btn btn-light text-darky position-relative">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span id="cartCount"
                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
@@ -28,7 +31,7 @@
     </nav>
 
     <!-- Breadcrumbs  -->
-    <nav aria-label="breadcrumb" class="py-2">
+    <nav aria-label="breadcrumb" class="py-3">
         <div class="container flex-column flex-md-row d-md-flex align-items-center justify-content-between">
             <ol class="breadcrumb mb-3" id="breadcrumb">
                 <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
@@ -51,7 +54,8 @@
                 <button id="clearCartBtn" class="btn btn-sm btn-outline-danger" onclick="handleClearCart()">
                     <i class="fa-solid fa-trash me-1"></i>Clear Cart
                 </button>
-                <button class="btn btn-primary" onclick="alert('Checkout integration coming soon!')">Checkout</button>
+                <button id="checkoutBtn" class="btn btn-darky" 
+                onclick="location.href='checkout.html'">Checkout</button>
             </div>
             
         </div>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Modern Shop</title>
+    <meta name="description"
+        content="Explore Checkout: A high-performance e-commerce storefront featuring real-time product filtering, category browsing, and a seamless sliding cart experience powered by DummyJSON API.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font-awesome/all.min.css">
+    <link rel="stylesheet" href="../css/app.css">
+</head>
+
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-darky sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-bag-shopping me-2"></i>MODERN-SHOP</a>
+
+            <a href="./yourCart.html" class="btn btn-light text-darky position-relative">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cartCount"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs  -->
+    <nav aria-label="breadcrumb" class="py-3">
+        <div class="container flex-column flex-md-row d-md-flex align-items-center justify-content-between">
+            <ol class="breadcrumb mb-3" id="breadcrumb">
+                <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+                <li class="breadcrumb-item active">Checkout</li>
+            </ol>
+        </div>
+    </nav>
+
+    <div class="container py-2">
+        <div class="row">
+
+            <!-- LEFT: Shipping Details -->
+            <div class="col-md-7">
+                <div class="card shadow-sm p-4 mb-4">
+                    <h4 class="mb-3">Shipping Details</h4>
+
+                    <form id="checkoutForm">
+                        <div class="mb-3">
+                            <label>Name</label>
+                            <input type="text" class="form-control form-control-darky" id="name" minlength="3" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Phone</label>
+                            <input type="tel" class="form-control form-control-darky" id="phone" pattern="[0-9]{10}" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Address</label>
+                            <textarea class="form-control form-control-darky" id="address" rows="3" 
+                            pattern="[A-Za-z0-9\s,.-]+" required></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Payment Method</label>
+                            <select class="form-select form-control-darky" id="payment">
+                                <option value="cod">Cash on Delivery</option>
+                                <option value="upi">UPI</option>
+                                <option value="card">Card</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- RIGHT: Order Summary -->
+            <div class="col-md-5">
+                <div class="card shadow-sm p-4">
+                    <h4 class="mb-3">Order Summary</h4>
+
+                    <div id="checkoutItems"></div>
+
+                    <hr>
+
+                    <div class="d-flex justify-content-between">
+                        <strong>Total:</strong>
+                        <strong id="checkoutTotal">₹0</strong>
+                    </div>
+
+                    <button class="btn btn-darky w-100 mt-4" onclick="placeOrder()">
+                        Place Order
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/rate.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/checkout.js"></script>
+
+</body>
+
+</html>

@@ -54,7 +54,7 @@ function render(data) {
                 <p class="card-text text-muted small flex-grow-1">${p.description.substring(0, 50)}...</p>
                 <div class="d-flex justify-content-between align-items-center mt-auto pt-3">
                     <span class="h5 mb-0">${formatINR(p.price)}</span>
-                    <button onclick="handleAddToCart(${p.id})" class="btn btn-sm btn-dark px-3">
+                    <button onclick="handleAddToCart(${p.id})" class="btn btn-sm btn-darky px-3">
                         <i class="fa-solid fa-plus me-1"></i>Add
                     </button>                    
                 </div>

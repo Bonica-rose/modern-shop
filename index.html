@@ -8,6 +8,9 @@
     <meta name="description"
         content="Explore Modern Shop: A high-performance e-commerce storefront featuring real-time product filtering, category browsing, and a seamless sliding cart experience powered by DummyJSON API.">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./font-awesome/all.min.css">
     <link rel="stylesheet" href="./css/app.css">
@@ -15,11 +18,11 @@
 
 <body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-darky sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#"><i class="fa-solid fa-bag-shopping me-2"></i>MODERN-SHOP</a>
 
-            <a href="./pages/yourCart.html" class="btn btn-dark position-relative">
+            <a href="./pages/yourCart.html" class="btn btn-light text-darky position-relative">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span id="cartCount"
                     class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
@@ -32,17 +35,17 @@
         <div class="row g-3 mb-4 align-items-center bg-white p-3 rounded shadow-sm">
             <div class="col-md-5">
                 <div class="input-group">
-                    <span class="input-group-text bg-white"><i class="fa-solid fa-magnifying-glass"></i></span>
-                    <input type="text" id="searchInput" class="form-control" placeholder="Search products...">
+                    <span class="input-group-text bg-white text-darky"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" id="searchInput" class="form-control form-control-darky" placeholder="Search products...">
                 </div>
             </div>
             <div class="col-md-4">
-                <select id="categoryFilter" class="form-select text-capitalize">
+                <select id="categoryFilter" class="form-select text-capitalize form-control-darky">
                     <option value="all">All Categories</option>
                 </select>
             </div>
             <div class="col-md-3 text-end">
-                <button id="shuffleBtn" class="btn btn-outline-secondary w-100"><i
+                <button id="shuffleBtn" class="btn btn-outline-darky w-100"><i
                         class="fa-solid fa-shuffle me-2"></i>Shuffle</button>
             </div>
         </div>

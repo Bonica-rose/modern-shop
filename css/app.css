@@ -1,3 +1,48 @@
+.bg-darky{
+    background:#9b274e;
+    color: #f8f9fa;
+}
+
+.text-darky,
+.text-darky:hover{
+    color:rgb(155, 39, 78);
+}
+
+.btn-darky,
+.btn-darky:hover{
+    background: #9b274e;
+    color: #f8f9fa;
+    border:1px solid #802040;
+}
+
+.btn-secondary-darky,
+.btn-secondary-darky:hover {
+    background: #f5cfdc;
+    color: #000;
+    border: 1px solid #f5cfdc;
+}
+
+/* Custom outline button */
+.btn-outline-darky {
+    color: #9b274e;
+    border: 2px solid #9b274e;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.btn-outline-darky:hover {
+    color: #fff;
+    background-color: #9b274e;
+    border-color: #9b274e;
+}
+
+.form-control-darky:focus {
+    border-color: #9b274e;
+    box-shadow: 0 0 0 0.2rem rgba(155, 39, 78, 0.25);
+    outline: none;
+}
+
 .product-card {
     transition: 0.3s;
     border: none;
@@ -5,7 +50,7 @@
 
 .product-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px rgba(155, 39, 78, 0.1);
 }
 
 .img-container {

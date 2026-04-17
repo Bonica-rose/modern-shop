@@ -1,7 +1,8 @@
 function renderCart() {
     const cartItemsContainer = document.getElementById('cartItems');
     const cartTotal = document.getElementById('cartTotal');
-    const clearBtn = document.getElementById('clearCartBtn');
+    const clearBtn = document.getElementById('clearCartBtn'); 
+    const checkoutBtn = document.getElementById('checkoutBtn'); 
 
     const cartData = getCart(); // from cart.js
 
@@ -9,13 +10,15 @@ function renderCart() {
         cartItemsContainer.innerHTML = `
             <div class="text-center py-5">
                 <h4>Your cart is empty!</h4>
-                <a href="../index.html" class="btn btn-dark mt-3">Shop Now</a>
+                <a href="../index.html" class="btn btn-darky mt-3">Shop Now</a>
             </div>`;
         cartTotal.innerText = "₹0";
         if (clearBtn) clearBtn.disabled = true; // disable button
+        if (checkoutBtn) checkoutBtn.disabled = true; // disable button
         return;
     }
     if (clearBtn) clearBtn.disabled = false; // enable when items exist
+    if (checkoutBtn) checkoutBtn.disabled = false; // enable when items exist
 
     let totalAmount = 0;
 
@@ -32,8 +35,8 @@ function renderCart() {
             </div>
 
             <div>
-                <button class="btn btn-sm btn-secondary" onclick="changeQty(${item.id}, -1)">-</button>
-                <button class="btn btn-sm btn-secondary" onclick="changeQty(${item.id}, 1)">+</button>
+                <button class="btn btn-sm btn-secondary-darky" onclick="changeQty(${item.id}, -1)">-</button>
+                <button class="btn btn-sm btn-secondary-darky" onclick="changeQty(${item.id}, 1)">+</button>
                 <button class="btn btn-sm text-danger" onclick="handleRemove(${item.id})">🗑</button>
             </div>
         </div>`;

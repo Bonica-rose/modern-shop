@@ -52,7 +52,7 @@ function renderProduct(p) {
                 ${p.rating}
             </p>
 
-            <button class="btn btn-dark mt-3" onclick="handleAddToCart()">
+            <button class="btn btn-darky mt-3" onclick="handleAddToCart()">
                 Add to Cart
             </button>
         </div>
@@ -67,7 +67,7 @@ function handleAddToCart() {
 
     addToCart(window.currentProduct);  // from cart.js
     updateCartBadge();// from cart.js
-    alert("Added to cart!");
+    // alert("Added to cart!");
 }
 
 // Back button
